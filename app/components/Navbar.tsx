@@ -21,7 +21,7 @@ const Navbar = () => {
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 md:px-12 py-4">
         <a href="#hero" className="text-xl font-bold text-primary font-mono">
-          {"<YN />"}
+          krunika.patel()
         </a>
         <ul className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
