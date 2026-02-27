@@ -15,9 +15,9 @@ const Hero = () => {
           <h1 className="hero-animate-2 text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-6">
             Krunika Patel.
           </h1>
-          <p className="hero-animate-3 text-muted-foreground text-lg max-w-md leading-relaxed mb-10">
-            I build robust, scalable web applications and APIs —
-            turning complex problems into clean, efficient solutions.
+          <p className="hero-animate-3 text-muted-foreground text-lg leading-relaxed mb-10">
+            I build scalable web applications and high-performance APIs that power real-world products.
+            With 4+ years of experience in the MERN ecosystem, I focus on clean architecture, optimized databases, and production-ready solutions.
           </p>
           <div className="hero-animate-4 flex flex-wrap items-center gap-4">
             <a

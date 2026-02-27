@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Dark terminal background -->
+  <rect width="32" height="32" rx="6" fill="#0D1117"/>
+  <!-- Terminal $_ prompt in theme primary (teal hsl 174 72% 56%) -->
+  <text
+    x="3"
+    y="23"
+    font-family="ui-monospace,SFMono-Regular,Menlo,monospace"
+    font-weight="900"
+    font-size="17"
+    fill="#3EDFCF"
+  >$_</text>
+</svg>

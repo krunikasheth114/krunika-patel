@@ -6,19 +6,19 @@ import useFadeIn from "@/hooks/use-fade-in";
 const skillCategories = [
   {
     title: "Frontend",
-    skills: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+    skills: "React, Next.js, TypeScript, Tailwind CSS, State Management",
   },
   {
     title: "Backend",
-    skills: ["Node.js", "Express", "REST APIs", "GraphQL"],
+    skills: "Node.js, Express, REST APIs, Authentication, GraphQL",
   },
   {
     title: "Database",
-    skills: ["MongoDB", "PostgreSQL", "Redis", "Mongoose"],
+    skills: "MongoDB, PostgreSQL, Prisma, Redis",
   },
   {
-    title: "DevOps / Tools",
-    skills: ["Docker", "AWS", "Git", "CI/CD"],
+    title: "DevOps & Tools",
+    skills: "Git, Docker, AWS EC2, CI/CD",
   },
 ];
 
@@ -43,20 +43,12 @@ const Skills = () => {
               key={cat.title}
               className="bg-card border border-border rounded-lg p-6 card-hover hover:border-primary/40"
             >
-              <h3 className="text-primary font-mono text-sm font-semibold mb-4 uppercase tracking-wider">
+              <h3 className="text-primary font-mono text-sm font-semibold mb-2 uppercase tracking-wider">
                 {cat.title}
               </h3>
-              <ul className="space-y-2">
-                {cat.skills.map((skill) => (
-                  <li
-                    key={skill}
-                    className="text-muted-foreground text-sm flex items-center gap-2"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block glow-dot" />
-                    {skill}
-                  </li>
-                ))}
-              </ul>
+              <p className="text-foreground text-sm leading-relaxed">
+                {cat.skills}
+              </p>
             </div>
           ))}
         </div>
