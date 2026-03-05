@@ -29,22 +29,24 @@ const Hero = () => {
               <Download size={18} className="transition-transform group-hover:-translate-y-0.5" />
               Download Resume
             </a>
-            <a
-              href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-12 h-12 rounded-md border border-border text-muted-foreground hover:text-primary hover:border-primary hover:-translate-y-1 transition-all duration-300"
-            >
-              <Linkedin size={20} />
-            </a>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-12 h-12 rounded-md border border-border text-muted-foreground hover:text-primary hover:border-primary hover:-translate-y-1 transition-all duration-300"
-            >
-              <Github size={20} />
-            </a>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-11 h-11 rounded-md border border-border text-muted-foreground hover:text-primary hover:border-primary hover:-translate-y-1 transition-all duration-300"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-11 h-11 rounded-md border border-border text-muted-foreground hover:text-primary hover:border-primary hover:-translate-y-1 transition-all duration-300"
+              >
+                <Github size={20} />
+              </a>
+            </div>
           </div>
         </div>
 
