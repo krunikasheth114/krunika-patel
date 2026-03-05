@@ -1,5 +1,6 @@
-import { Github, Linkedin, Download } from "lucide-react";
+"use client";
 
+import { Github, Linkedin, Download } from "lucide-react";
 const Hero = () => {
   return (
     <section

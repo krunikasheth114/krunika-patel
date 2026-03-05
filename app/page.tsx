@@ -9,13 +9,15 @@ import InstallScreen from "./components/InstallScreen";
 const Home = () => {
   return (
     <div className="min-h-screen bg-background">
-      <InstallScreen />
+      {/* <InstallScreen />
       <Navbar />
-      <Hero />
+      <Hero /> */}
       {/* <Services /> */}
-      <Skills />
+      {/* <Skills />
       <Projects />
-      <Contact />
+      <Contact /> */}
+        return <h1>Krunika Portfolio 🚀</h1>;
+
     </div>
   );
 };
