@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { Sun, Moon, MoreVertical } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 
-const navItems = ["About", /* "Services", */ "Skills", "Projects", "Contact"];
+const navItems = ["About", "Services", "Skills", "Projects", "Contact"];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);

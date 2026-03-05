@@ -34,12 +34,19 @@ export default function InstallScreen() {
 
   function proceed() {
     clearAllTimers();
+    sessionStorage.setItem("install-seen", "1");
     setIsFading(true);
     const t = setTimeout(() => setIsDone(true), 700);
     timers.current.push(t);
   }
 
   useEffect(() => {
+    if (sessionStorage.getItem("install-seen")) {
+      setIsDone(true);
+      setMounted(true);
+      return;
+    }
+    sessionStorage.setItem("install-seen", "1");
     setMounted(true);
   }, []);
 

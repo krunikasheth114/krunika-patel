@@ -1,59 +1,25 @@
 "use client";
 
 import React from "react";
-import { ShoppingCart, LayoutDashboard, Server, Monitor } from "lucide-react";
+import Link from "next/link";
+import {
+  ShoppingCart,
+  LayoutDashboard,
+  Server,
+  Users,
+  Monitor,
+  ArrowRight,
+} from "lucide-react";
 import useFadeIn from "@/hooks/use-fade-in";
+import { services } from "@/app/services/data";
 
-const services = [
-  {
-    icon: ShoppingCart,
-    title: "E-Commerce Development",
-    description:
-      "End-to-end online stores built for performance and conversion.",
-    features: [
-      "Product catalog & inventory management",
-      "Cart, checkout & payment integration",
-      "Admin dashboard & order tracking",
-      "Auth, reviews & wishlist",
-    ],
-  },
-  {
-    icon: LayoutDashboard,
-    title: "SaaS Dashboard",
-    description:
-      "Data-rich dashboards that turn complex information into clear insights.",
-    features: [
-      "Analytics & data visualization",
-      "Role-based access control",
-      "Real-time updates & notifications",
-      "Subscription & billing management",
-    ],
-  },
-  {
-    icon: Server,
-    title: "REST API & Backend",
-    description:
-      "Robust, scalable server-side systems that power your product.",
-    features: [
-      "RESTful & GraphQL API design",
-      "JWT / OAuth authentication",
-      "Database modelling & optimization",
-      "Third-party service integrations",
-    ],
-  },
-  {
-    icon: Monitor,
-    title: "Landing Page",
-    description:
-      "Fast, responsive pages designed to convert visitors into clients.",
-    features: [
-      "Pixel-perfect responsive layouts",
-      "Performance & Core Web Vitals optimized",
-      "SEO-ready structure",
-      "Smooth animations & interactions",
-    ],
-  },
-];
+const iconMap: Record<string, React.ElementType> = {
+  ShoppingCart,
+  LayoutDashboard,
+  Server,
+  Users,
+  Monitor,
+};
 
 const Services = () => {
   const ref = useFadeIn();
@@ -72,11 +38,12 @@ const Services = () => {
           ref={ref as React.RefObject<HTMLDivElement>}
         >
           {services.map((service) => {
-            const Icon = service.icon;
+            const Icon = iconMap[service.icon] ?? Monitor;
             return (
-              <div
-                key={service.title}
-                className="bg-card border border-border rounded-lg p-6 card-hover hover:border-primary/40 group"
+              <Link
+                key={service.slug}
+                href={`/services/${service.slug}`}
+                className="bg-card border border-border rounded-lg p-6 card-hover hover:border-primary/40 group flex flex-col"
               >
                 <div className="flex items-center gap-3 mb-3">
                   <span className="inline-flex items-center justify-center w-9 h-9 rounded-md bg-primary/10 border border-primary/20 text-primary group-hover:bg-primary/20 transition-colors">
@@ -87,22 +54,19 @@ const Services = () => {
                   </h3>
                 </div>
 
-                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed flex-1">
                   {service.description}
                 </p>
 
-                <ul className="space-y-1.5">
-                  {service.features.map((feat) => (
-                    <li
-                      key={feat}
-                      className="text-muted-foreground text-sm flex items-start gap-2"
-                    >
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary inline-block shrink-0 glow-dot" />
-                      {feat}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-muted-foreground font-mono">
+                    {service.features.length} features included
+                  </span>
+                  <span className="text-primary text-sm flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    View details <ArrowRight size={14} />
+                  </span>
+                </div>
+              </Link>
             );
           })}
         </div>

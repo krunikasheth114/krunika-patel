@@ -7,7 +7,7 @@ const Hero = () => {
       id="hero"
       className="min-h-screen flex items-center section-padding pt-24 md:pt-32"
     >
-      <div className="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 items-center">
+      <div className="max-w-6xl mx-auto w-full">
         {/* Left */}
         <div>
           <p className="hero-animate-1 text-primary font-mono text-sm mb-3 tracking-widest uppercase">
@@ -50,7 +50,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Right */}
+        {/* Right — stats card (commented out)
         <div className="hero-animate-4 hidden md:block">
           <div
             className="rounded-xl border border-border p-6 space-y-4 w-52"
@@ -72,6 +72,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
+        */}
       </div>
     </section>
   );
