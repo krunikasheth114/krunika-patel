@@ -20,7 +20,7 @@ const Contact = () => {
         </h2>
         <div className="w-16 h-0.5 bg-primary mx-auto mb-10" />
 
-        <p className="text-muted-foreground text-lg leading-relaxed mb-10">
+        <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-10">
           I'm currently open to new opportunities. Whether you have a project in mind or just want to connect — my inbox is always open.
         </p>
 

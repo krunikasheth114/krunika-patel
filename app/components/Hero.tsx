@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center section-padding pt-32"
+      className="min-h-screen flex items-center section-padding pt-24 md:pt-32"
     >
       <div className="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 items-center">
         {/* Left */}
@@ -13,10 +13,10 @@ const Hero = () => {
           <p className="hero-animate-1 text-primary font-mono text-sm mb-3 tracking-widest uppercase">
             Full Stack Developer · MERN
           </p>
-          <h1 className="hero-animate-2 text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-6">
+          <h1 className="hero-animate-2 text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-6">
             Krunika Patel.
           </h1>
-          <p className="hero-animate-3 text-muted-foreground text-lg leading-relaxed mb-10">
+          <p className="hero-animate-3 text-muted-foreground text-base md:text-lg leading-relaxed mb-8 md:mb-10">
             I build scalable web applications and high-performance APIs that power real-world products.
             With 4+ years of experience in the MERN ecosystem, I focus on clean architecture, optimized databases, and production-ready solutions.
           </p>
