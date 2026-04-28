@@ -18,15 +18,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Krunika Patel – Full Stack Developer",
+  title: "Krunika Patel – MERN Stack Developer | AI-Driven Solutions",
   description:
-    "Portfolio of Krunika Patel, a Full Stack Developer with 4+ years of experience building scalable web applications and high-performance APIs using React, Next.js, Node.js, and MongoDB.",
+    "A MERN Stack Developer with 4+ years of experience building scalable web platforms, SaaS products, and AI-driven applications. Specialized in React, Next.js, Node.js, and MongoDB, with a focus on creating efficient, user-centric, and business-oriented solutions.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
   },
 };
-
 export default function RootLayout({
   children,
 }: {
