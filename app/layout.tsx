@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Krunika Patel – MERN Stack Developer | AI-Driven Solutions",
   description:
-    "A MERN Stack Developer with 4+ years of experience building scalable web platforms, SaaS products, and AI-driven applications. Specialized in React, Next.js, Node.js, and MongoDB, with a focus on creating efficient, user-centric, and business-oriented solutions.",
+    "A MERN Stack Developer focused on building scalable web platforms, SaaS products, and AI-driven applications. Skilled in React, Next.js, Node.js, and MongoDB, with a strong emphasis on performance, usability, and real business impact.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
