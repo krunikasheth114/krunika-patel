@@ -35,7 +35,7 @@ const Navbar = () => {
         scrolled ? "bg-background/90 backdrop-blur-md border-b border-border" : ""
       }`}
     >
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-4 md:px-12 py-3 md:py-4">
+      <div className="max-w-6xl mx-auto flex items-center justify-between gap-3 px-4 md:px-12 py-3 md:py-4">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-2 group">
           <span className="flex items-center gap-1">
@@ -43,7 +43,7 @@ const Navbar = () => {
             <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" />
             <span className="w-2.5 h-2.5 rounded-full bg-[#28C840]" />
           </span>
-          <span className="font-mono font-bold text-lg leading-none">
+          <span className="font-mono font-bold text-base leading-none sm:text-lg">
             <span className="text-muted-foreground">$ </span>
             <span className="text-primary typing-cursor">krunika.patel</span>
           </span>
@@ -91,7 +91,18 @@ const Navbar = () => {
           </button>
 
           {menuOpen && (
-            <div className="absolute right-0 top-full mt-2 w-44 rounded-lg border border-border bg-background/95 backdrop-blur-md shadow-lg overflow-hidden">
+            <div className="absolute right-0 top-full mt-2 w-48 rounded-lg border border-border bg-background/95 backdrop-blur-md shadow-lg overflow-hidden">
+              {navItems.map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  onClick={() => setMenuOpen(false)}
+                  className="flex items-center px-4 py-3 text-sm text-muted-foreground hover:text-primary hover:bg-muted/40 transition-colors"
+                >
+                  {item}
+                </a>
+              ))}
+              <div className="border-t border-border" />
               {/* Theme toggle row */}
               <button
                 onClick={() => { toggleTheme(); setMenuOpen(false); }}

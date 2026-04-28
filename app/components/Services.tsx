@@ -27,11 +27,11 @@ const Services = () => {
   return (
     <section id="services" className="section-padding">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2">
-          <span className="text-primary font-mono text-lg mr-2">02.</span>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+          <span className="text-primary font-mono text-base sm:text-lg mr-2">02.</span>
           Services
         </h2>
-        <div className="w-16 h-0.5 bg-primary mb-10" />
+        <div className="w-16 h-0.5 bg-primary mb-8 md:mb-10" />
 
         <div
           className="grid grid-cols-1 sm:grid-cols-2 gap-6 stagger-children"
@@ -43,7 +43,7 @@ const Services = () => {
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
-                className="bg-card border border-border rounded-lg p-6 card-hover hover:border-primary/40 group flex flex-col"
+                className="bg-card border border-border rounded-lg p-5 sm:p-6 card-hover hover:border-primary/40 group flex flex-col"
               >
                 <div className="flex items-center gap-3 mb-3">
                   <span className="inline-flex items-center justify-center w-9 h-9 rounded-md bg-primary/10 border border-primary/20 text-primary group-hover:bg-primary/20 transition-colors">
@@ -58,7 +58,7 @@ const Services = () => {
                   {service.description}
                 </p>
 
-                <div className="flex items-center justify-between">
+                <div className="flex flex-wrap items-center justify-between gap-3">
                   <span className="text-xs text-muted-foreground font-mono">
                     {service.features.length} features included
                   </span>

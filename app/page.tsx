@@ -5,6 +5,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import InstallScreen from "./components/InstallScreen";
+import ScrollToTopRocket from "./components/ScrollToTopRocket";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Skills />
       <Projects />
       <Contact />
+      <ScrollToTopRocket />
     </div>
   );
 };

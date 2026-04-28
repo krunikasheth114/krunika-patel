@@ -52,7 +52,7 @@ export default async function ServicePage({
 
   return (
     <div className="min-h-screen bg-background">
-      <main className="max-w-3xl mx-auto px-6 md:px-12 py-24">
+      <main className="max-w-3xl mx-auto px-4 sm:px-6 md:px-12 py-20 md:py-24">
         {/* Back link */}
         <Link
           href="/#services"
@@ -63,11 +63,13 @@ export default async function ServicePage({
         </Link>
 
         {/* Header */}
-        <div className="flex items-center gap-4 mb-6">
-          <span className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 text-primary shrink-0">
-            <Icon size={24} />
+        <div className="flex items-start gap-4 mb-6">
+          <span className="inline-flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-primary/10 border border-primary/20 text-primary shrink-0">
+            <Icon size={22} />
           </span>
-          <h1 className="text-3xl md:text-4xl font-bold">{service.title}</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
+            {service.title}
+          </h1>
         </div>
 
         {/* Description */}
@@ -76,7 +78,7 @@ export default async function ServicePage({
         </p>
 
         {/* Features */}
-        <div className="bg-card border border-border rounded-lg p-6 mb-8">
+        <div className="bg-card border border-border rounded-lg p-5 sm:p-6 mb-8">
           <h2 className="font-semibold text-lg mb-5">What&apos;s Included</h2>
           <ul className="space-y-3">
             {service.features.map((feat) => (
@@ -91,7 +93,7 @@ export default async function ServicePage({
         {/* CTA */}
         <a
           href="mailto:krunikasheth114@gmail.com"
-          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md text-sm font-medium hover:opacity-90 transition-opacity"
+          className="inline-flex w-full items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md text-sm font-medium hover:opacity-90 transition-opacity sm:w-auto"
         >
           Let&apos;s Work Together
           <ArrowRight size={16} />
